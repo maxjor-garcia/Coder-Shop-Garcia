@@ -1,4 +1,10 @@
 .itemcount {
-    background: red;
+    font-size: 30px;
+    background: grey;
     padding: 20px;
+}
+
+.boton {
+    font-size: 24px;
+    border-radius: 8px;
 }

@@ -2,38 +2,40 @@ import React from "react";
 import { useState } from "react";
 import "./ItemCount.css";
 
-const ItemCount = () => {
-    const [result, setResult] = useState("");
-    const [number1, setNumber1] = useState("");
-    const [number2, setNumber2] = useState("");
+const ItemCount = ({inicial, stock, onAdd}) => {
 
-    return (
-        <div className="itemcount">
-            <label htmlFor="number1">
-                Number 1:
-                <input
-                    id="number1"
-                    type="number"
-                    value={number1}
-                    onChange={(e) => setNumber1(e.target.value)}
-                />
-            </label>
-            <label htmlFor="number2">
-                Number 2:
-                <input
-                    id="number2"
-                    type="number"
-                    value={number2}
-                    onChange={(e) => setNumber2(e.target.value)}
-                />
-            </label>
-            <div>
-                <button>+</button>
-                <button>-</button>
+    const [contador, setContador] = useState(inicial)
+    const [nuevoStock, setStock] = useState(stock)
+
+    const restar = () => {
+        if (contador > 0){
+            setContador (contador - 1)
+            setStock (nuevoStock + 1)
+        }
+    }
+
+    const sumar = () => {
+        if (nuevoStock !== 0){
+            setContador (contador +1)
+            setStock (nuevoStock -1)
+        }
+    }
+
+    const agregar = () => {
+        alert(`Agregaste ${contador} al carrito`)
+    }
+
+    return(
+        <>
+            <div className='itemcount'>
+                <p>{nuevoStock} en stock</p>
+                <button className='boton' onClick={restar}>-</button>
+                <span>{contador}</span>
+                <button className='boton' onClick={sumar}>+</button>
+                <button className='boton' onClick={agregar}>Comprar</button>
             </div>
-            <p>El resultado es{result}</p>
-        </div>
-    );
-};
-
+        </>    
+    )   
+}
+    
 export { ItemCount };

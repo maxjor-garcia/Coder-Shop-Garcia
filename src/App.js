@@ -9,7 +9,7 @@ function App() {
             <h1>Mercado de consolas</h1>
             <NavBar />
             <ItemListContainer greeting={"Bienvenidos a todos"} />
-            <ItemCount />
+            <ItemCount inicial={1} stock={10} onAdd={"nada"} />
         </div>
     );
 }
