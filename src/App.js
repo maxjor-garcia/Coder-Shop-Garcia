@@ -8,7 +8,7 @@ function App() {
         <div className="App">
             <h1>Mercado de consolas</h1>
             <NavBar />
-            <ItemListContainer greeting={"Bienvenidos a todos"} />
+            <ItemListContainer />
             <ItemCount inicial={1} stock={10} onAdd={"nada"} />
         </div>
     );
