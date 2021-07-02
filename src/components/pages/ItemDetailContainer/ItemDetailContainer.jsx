@@ -1,9 +1,11 @@
 import React from "react";
-import "./ItemListContainer.css";
-import { ItemDetail } from "../ItemDetail/ItemDetail";
+import "./ItemDetailContainer.css";
+import { ItemDetail } from "../../ItemDetail/ItemDetail";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
+    const { id } = useParams();
     const [catalogo1, setCatalogo1] = useState([]);
 
     const prod = [
