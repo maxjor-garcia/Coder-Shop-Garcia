@@ -1,8 +1,7 @@
 import "./App.css";
 import { NavBar } from "./components/NavBar/NavBar";
-import { ItemListContainer } from "./components/pages/ItemListContainer/ItemListContainer";
-import { ItemDetailContainer } from "./components/pages/ItemDetailContainer/ItemDetailContainer";
-import { ItemCount } from "./components/ItemCount/ItemCount";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export const App = () => {

@@ -1,0 +1,8 @@
+.item-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-detail--nodisplay {
+    display: none;
+}
