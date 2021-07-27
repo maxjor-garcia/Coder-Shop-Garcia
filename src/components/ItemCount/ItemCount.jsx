@@ -20,9 +20,9 @@ const ItemCount = ({ inicial, stock, onAdd }) => {
         }
     };
 
-    const agregar = () => {
-        alert(`Agregaste ${contador} al carrito`);
-    };
+    // const agregar = () => {
+    //     alert(`Agregaste ${contador} al carrito`);
+    // };
 
     return (
         <>
@@ -35,7 +35,11 @@ const ItemCount = ({ inicial, stock, onAdd }) => {
                 <button className="boton" onClick={sumar}>
                     +
                 </button>
-                <button className="boton" onClick={agregar}>
+                <button
+                    disabled={!contador}
+                    className="boton"
+                    onClick={(e) => onAdd(contador)}
+                >
                     Comprar
                 </button>
             </div>
